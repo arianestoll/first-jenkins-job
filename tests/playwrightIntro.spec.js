@@ -14,3 +14,4 @@ await page.waitForTimeout(3000);// this is a method from the 'page' fixture
 //otherwise, when using an sync function with await, there is no need for more wait
 
 });
+//adding some comments to have something to commit
