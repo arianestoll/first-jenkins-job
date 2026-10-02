@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "tests": "npx playwright test",
+    "testfile": "npx playwright test --grep environment-variables.spec.js",
+    "test1": "npx playwright test --grep @test1",
+    "titletest": "npx playwright test --grep @titletest",
+    "report": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

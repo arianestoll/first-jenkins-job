@@ -5,7 +5,7 @@
 
 import {test} from "@playwright/test";
 
-test("", async ({page}) =>{
+test("going to google", async ({page}) =>{
 
 await page.goto("https://www.google.com");
 
