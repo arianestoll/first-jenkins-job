@@ -5,8 +5,8 @@ pipeline {
         stage('Install & Test') {
             steps {
                 sh '''
-                    docker run --rm -v ${WORKSPACE}:/app -w /app <your-image> npm install
-                    docker run --rm -v ${WORKSPACE}:/app -w /app <your-image> npm test
+                    docker run --rm -v ${WORKSPACE}:/app -w /app mcr.microsoft.com/playwright:v1.63.0-jammy npm install
+                    docker run --rm -v ${WORKSPACE}:/app -w /app mcr.microsoft.com/playwright:v1.63.0-jammy npm test
                 '''
             }
         }
