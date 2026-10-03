@@ -5,10 +5,10 @@ pipeline {
         stage('Install & Test') {
             steps {
                 sh '''
-                    docker run --rm -v ${WORKSPACE}:/app \ 
+                    docker run --rm -v ${WORKSPACE}:/app  
                     -w /app \
                         -e PRACTICE_USERNAME="${PRACTICE_USERNAME}" \
-                        -e PRACTICE_PASSWORD="${PRACTICE_PASSWORD}" \ 
+                        -e PRACTICE_PASSWORD="${PRACTICE_PASSWORD}"  
                         mcr.microsoft.com/playwright:v1.63.0-jammy npm install
                     docker run --rm -v ${WORKSPACE}:/app -w /app -e PRACTICE_USERNAME="${PRACTICE_USERNAME}" \
                         -e PRACTICE_PASSWORD="${PRACTICE_PASSWORD}"  mcr.microsoft.com/playwright:v1.63.0-jammy npm run tests
